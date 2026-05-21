@@ -1,11 +1,14 @@
 
-def compound_interest(p, t, r):
-    return p * (pow((1 + r / 100), t))
+# Output:
+# simple interest = p*t*r
 
+echo "Enter the principal:"
+read p
+echo "Enter rate of interest per year:"
+read r
+echo "Enter time period in years:"
+read t
 
-if __name__ == "__main__":
-    p = float(input("Enter the principal amount: "))
-    t = float(input("Enter the time period: "))
-    r = float(input("Enter the rate of interest: "))
-
-    print("The compound interest is {:.2f}".format(compound_interest(p, t, r)))
+s=$(expr $p \* $t \* $r / 100)
+echo "The simple interest is: "
+echo $s
